@@ -30,5 +30,5 @@ if __name__ == "__main__":
 
     resp = client.Enqueue(req, metadata=auth_token)
 
-    # Print the downlink id
+    # Print the downlink frame counter
     print(resp.f_cnt)
