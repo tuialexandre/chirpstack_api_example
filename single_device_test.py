@@ -4,13 +4,13 @@ from chirpstack_api import api
 # Configuration.
 
 # This must point to the API interface.
-server = "localhost:8080"
+server = "192.168.0.181:8080"
 
 # The DevEUI for which you want to enqueue the downlink.
-dev_eui = "..."
+dev_eui = "0012f800000029a6"
 
 # The API token (retrieved using the web-interface).
-api_token = "..."
+api_token = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJjaGlycHN0YWNrIiwiaXNzIjoiY2hpcnBzdGFjayIsInN1YiI6ImE4YWVhNDU1LWU1M2QtNDhmNi1iOTViLTUwMTkyMDQxZTgyNyIsInR5cCI6ImtleSJ9.LNrWvRzO1ap8FaKNO0btYZwJN4zJI_oCS61Bq03y4Kk"
 
 if __name__ == "__main__":
     # Connect without using TLS.
@@ -25,7 +25,7 @@ if __name__ == "__main__":
     # Construct request.
     req = api.EnqueueDeviceQueueItemRequest()
     req.queue_item.confirmed = False
-    req.queue_item.data = b"test payload"
+    req.queue_item.data = b"teste api"
     req.queue_item.dev_eui = dev_eui
     req.queue_item.f_port = 10
 
